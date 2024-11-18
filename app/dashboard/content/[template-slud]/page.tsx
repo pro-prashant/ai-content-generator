@@ -14,7 +14,7 @@ interface PROPS {
 
   params: Promise<{ 'template-slud': string }>;
 }
-function CreateNewContent(props:PROPS) {
+function CreateNewContent({ params }: { params: { 'template-slud': string } }) {
 
   const selectedTemplate:TEMPLATE|undefined=template?.find((item)=>item.slug==props.params["template-slud"]);
   const [loading,setLoading]=useState(false);
