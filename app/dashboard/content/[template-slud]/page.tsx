@@ -11,10 +11,8 @@ import { chatSession } from '@/utils/AIModel'
 
 
 interface PROPS {
-params:{
-  'template-slud':string,
-   
-}
+
+  params: Promise<{ 'template-slud': string }>;
 }
 function CreateNewContent(props:PROPS) {
 
